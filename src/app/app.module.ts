@@ -10,10 +10,12 @@ import { ViewNoteComponent } from './components/view-note/view-note.component';
 import { NoteListComponent } from './components/note-list/note-list.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorModalComponent } from './error-modal/error-modal.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent,ViewNoteComponent,NoteListComponent, CreateNoteComponent, ViewNoteComponent],
+  declarations: [AppComponent,ViewNoteComponent,NoteListComponent, CreateNoteComponent, ViewNoteComponent,ErrorModalComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

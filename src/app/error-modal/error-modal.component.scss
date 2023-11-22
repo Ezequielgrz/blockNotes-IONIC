@@ -1,8 +1,25 @@
-ion-content {
-    text-align: center;
+.error-modal-content {
+    font-size: 14px; 
+    line-height: 1.5; 
+  }
+ion-header {
+    background-color: #ff4e50;
   }
   
-  p {
-    font-size: 1.2em;
-    color: red;
+  ion-title {
+    color: white;
   }
+  
+  ion-content {
+    padding: 10px; 
+  }
+  
+  ion-button {
+    color: #ff4e50; 
+  }
+  
+  ion-modal {
+    max-width: 300px; 
+    margin: auto; 
+  }
+  
