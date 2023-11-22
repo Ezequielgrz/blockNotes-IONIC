@@ -6,6 +6,15 @@ import { ViewNoteComponent } from './components/view-note/view-note.component';
 
 const routes: Routes = [
   { 
+    path: '', 
+    redirectTo: 'login', 
+    pathMatch: 'full' 
+  },
+  { 
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  { 
     path: 'create-note', 
     component: CreateNoteComponent 
   },
@@ -17,12 +26,10 @@ const routes: Routes = [
     path: 'view-note/:id', 
     component: ViewNoteComponent 
   },
-  { 
-    path: '', 
-    redirectTo: '/note-list', 
-    pathMatch: 'full' 
-  },
-  
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  }
 ];
 
 @NgModule({
