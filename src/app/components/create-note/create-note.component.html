@@ -6,11 +6,18 @@
 
 <ion-content>
   <ion-item>
+    <ion-label position="floating">Título de la Nota</ion-label>
+    <ion-input [(ngModel)]="noteTitle" type="text"></ion-input>
+  </ion-item>
+  <div *ngIf="noteTitle.trim() === ''" class="error-message">El título de la nota es obligatorio.</div>
+  
+  <ion-item>
     <ion-label position="floating">Contenido de la Nota</ion-label>
     <ion-input [(ngModel)]="noteText" type="text"></ion-input>
   </ion-item>
+  <div *ngIf="noteText.trim() === ''" class="error-message">El contenido de la nota es obligatorio.</div>
 
-  <ion-button (click)="createNote()">Guardar Nota</ion-button>
+  <ion-button (click)="createNote()" [disabled]="noteTitle.trim() === '' && noteText.trim() === ''">Guardar Nota</ion-button>
   <ion-button (click)="goToNoteList()">Ver Notas</ion-button>
 </ion-content>
 

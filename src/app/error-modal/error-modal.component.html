@@ -1,0 +1,14 @@
+<!-- error-modal.component.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Error</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>{{ errorMessage }}</p>
+</ion-content>

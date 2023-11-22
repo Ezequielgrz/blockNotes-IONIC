@@ -1,0 +1,19 @@
+/* create-note.component.scss */
+
+/* Estilo para los mensajes de error */
+.error-message {
+    color: gray;
+    font-size: 0.8em; /* Tamaño de la letra más pequeño */
+    opacity: 0.7; /* Opacidad más baja para hacer el texto más transparente */
+    margin-top: 4px; /* Espacio superior reducido */
+  }
+  
+  /* Estilo para el botón deshabilitado */
+  ion-button[disabled] {
+    background-color: #ccc;
+    color: #666;
+    font-size: 0.7em; 
+    opacity: 0.9; 
+    border-radius: 10px;
+  }
+  

@@ -17,10 +17,18 @@ export class CreateNoteComponent  implements OnInit {
   constructor(private noteService: NoteService, private router: Router) { }
 
   createNote() {
-    if (this.noteText) {
-      const newNote = { text: this.noteText, date: new Date(), id: this.noteService.generateUniqueId() };
+    if (this.noteText.trim() !== '' && this.noteTitle.trim() !== '') {
+      const newNote = {
+        title: this.noteTitle,
+        text: this.noteText,
+        date: new Date(),
+        id: this.noteService.generateUniqueId(),
+      };
       this.noteService.addNote(newNote);
       this.noteText = '';
+      this.noteTitle = '';
+    } else {
+      console.error('Título y contenido de la nota son obligatorios');
     }
   }
 

@@ -7,8 +7,9 @@
 <ion-content *ngIf="note">
   <ion-card>
     <ion-card-content>
-      <ion-card-title>{{ note.text }}</ion-card-title>
-      <p>Fecha: {{ note.date | date }}</p>
+      <ion-card-title>{{ note.title }}</ion-card-title>
+      <ion-card-subtitle>Fecha: {{ note.date | date }}</ion-card-subtitle>
+      <p>{{ note.text }}</p>
     </ion-card-content>
   </ion-card>
   <ion-button (click)="goBack()">Volver</ion-button>
