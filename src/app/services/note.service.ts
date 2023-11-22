@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class NoteService {
   }
 
   getNoteById(id: string): any {
-    return this.notes.find((note) => note.id === id);
+    return this.notes.find((note) => note.id === id.toString());
   }
 
   deleteNoteById(id: string) {

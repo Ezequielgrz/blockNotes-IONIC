@@ -5,15 +5,24 @@ import { NoteListComponent } from './components/note-list/note-list.component';
 import { ViewNoteComponent } from './components/view-note/view-note.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  { 
+    path: 'create-note', 
+    component: CreateNoteComponent 
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+  { 
+    path: 'note-list', 
+    component: NoteListComponent 
   },
+  { 
+    path: 'view-note/:id', 
+    component: ViewNoteComponent 
+  },
+  { 
+    path: '', 
+    redirectTo: '/note-list', 
+    pathMatch: 'full' 
+  },
+  
 ];
 
 @NgModule({

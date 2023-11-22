@@ -1,3 +1,18 @@
-<p>
-  note-list works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Notas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let note of notes">
+      <ion-label>{{ note.text }}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="viewNoteDetails(note.id)">Ver</ion-button>
+        <ion-button color="danger" (click)="deleteNote(note.id)">Eliminar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="goToCreateNote()">Crear Nota</ion-button>
+</ion-content>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NoteService } from '../../services/note.service';
 
+
 @Component({
   selector: 'app-note-list',
   templateUrl: './note-list.component.html',
@@ -24,6 +25,7 @@ export class NoteListComponent  implements OnInit {
 
   deleteNote(id: string) {
     this.noteService.deleteNoteById(id);
+    this.notes = this.noteService.getNotes();
   }
 
   goToCreateNote() {
